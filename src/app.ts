@@ -3,15 +3,9 @@ import bodyParser from 'body-parser';
 import config from './config/config';
 import cors from 'cors';
 import {container} from "tsyringe";
-// import http from 'http';
-// import SocketIO from 'socket.io';
+import helmet from 'helmet';
 
 const app = express();
-
-// socket io
-// let http = require("http").Server(app);
-// let server = http.createServer(app);
-// let io = SocketIO(server);
 
 const http = require('http').createServer(app);
 const io = require('socket.io')(http);
@@ -24,6 +18,7 @@ container.register('io', {
 app.set("port", config.port);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(helmet());
 
 // options for cors midddleware
 const options:cors.CorsOptions = {

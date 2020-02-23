@@ -20,6 +20,7 @@
     "convict": "^5.2.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "helmet": "^3.21.2",
     "pg": "^7.18.1",
     "reflect-metadata": "^0.1.13",
     "socket.io": "^2.3.0",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@types/convict": "^4.2.1",
     "@types/cors": "^2.8.6",
+    "@types/helmet": "0.0.45",
     "@types/node": "^13.7.2",
     "@types/socket.io": "^2.1.4",
     "tslint": "^6.0.0",
