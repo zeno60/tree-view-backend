@@ -69,8 +69,11 @@ export class FactoryController {
 
                 this.socketService.sendMessage({
                     type: 'UPDATE_FACTORY',
-                    data: updatedFactory,
-                })
+                    data: {
+                        treeId: updatedFactory.tree.id,
+                        factory: updatedFactory,
+                    },
+                });
 
                 response.status(200);
                 response.send(updatedFactory);

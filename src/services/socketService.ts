@@ -1,11 +1,12 @@
 import { injectable, inject } from "tsyringe";
 import { Factory } from "../models/Factory";
+import { Tree } from "../models/Tree";
 
-export type MessageType = 'DELETE_FACTORY' | 'UPDATE_FACTORY' | 'ADD_FACTORY';
+export type MessageType = 'DELETE_FACTORY' | 'UPDATE_FACTORY' | 'ADD_FACTORY' | 'ADD_TREE';
 
 export interface SocketMessage {
     type: MessageType;
-    data: number | Factory | { treeId: number, factory: Factory } | { treeId: number, factoryId: number };
+    data: number | Factory | Tree | { treeId: number, factory: Factory } | { treeId: number, factoryId: number };
 }
 
 export interface SocketService {

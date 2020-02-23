@@ -1,6 +1,6 @@
 {
     "database": {
-        "host": "10.123.15.78",
-        "port": 80
+        "host": "treeviewdb",
+        "port": 5432
     }
 }
