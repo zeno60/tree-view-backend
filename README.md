@@ -1,4 +1,4 @@
-Backend services for tree-view application
+Backend services for tree-view application.  The application is written in typescript and uses an express server to host restful routes to update the tree.  Tree data is persisted in a backend postgres database and uses typeorm to create and update database entities.
 
 ## Available Scripts
 

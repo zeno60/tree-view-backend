@@ -11,7 +11,9 @@
     "build-ts": "./node_modules/typescript/bin/tsc",
     "watch-ts": "./node_modules/typescript/bin/tsc -w",
     "test": "npm run test",
-    "lint": "./node_modules/tslint/bin/tslint -c tslint.json src/**/*.ts"
+    "lint": "./node_modules/tslint/bin/tslint -c tslint.json src/**/*.ts",
+    "docker-build": "docker build -t gcr.io/passport-tree-app-268922/tree-view-backend:latest .",
+    "docker-push": "docker push gcr.io/passport-tree-app-268922/tree-view-backend:latest"
   },
   "author": "",
   "license": "ISC",
